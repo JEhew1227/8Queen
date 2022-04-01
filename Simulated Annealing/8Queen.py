@@ -119,6 +119,5 @@ if __name__ == '__main__':
         print(board)
         SimulatedAnnealing(board).run()
         traced = tracemalloc.get_traced_memory()
-        print("total memory used: ")
-        print(traced[1] - traced[0])
+        print("total memory used: ",traced[1] - traced[0])
     tracemalloc.stop()
