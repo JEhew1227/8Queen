@@ -28,17 +28,17 @@ def step_steepestHillClimbing(board):
             board[col] = row
             collisionNumBoard[(row,col)] = getCollisionNum(board)
             board[col] = originRow
-    
-    
+
+
     for point,value in collisionNumBoard.items():
         if value < smallestCollisionNum:
             smallestCollisionNum = value
-    
+
     smallestCollisionPoints = []
     for point,value in collisionNumBoard.items():
         if value == smallestCollisionNum:
             smallestCollisionPoints.append(point)
-    
+
     # can not find a steeper move
     # we have come to the peek(local optimization)
     if len(smallestCollisionPoints) == 0:
@@ -46,7 +46,7 @@ def step_steepestHillClimbing(board):
         global FAILED
         FAILED = True
         return board
-    
+
     random.shuffle(smallestCollisionPoints)
     board[smallestCollisionPoints[0][1]]=smallestCollisionPoints[0][0]
     return board
@@ -64,7 +64,7 @@ def solution_steepestHillClimbing(board):
             global FAILED
             FAILED = True
             return board
-    
+
 def main():
     tracemalloc.start()
     title = "EightQueens_steepestHillClimbing"
@@ -77,7 +77,7 @@ def main():
             FAILED = False
             totalCase += 1
             board = []
-            for col in line.split():     
+            for col in line.split():
                 startTime = time.time()
                 board.append(int(col))
             board = solution_steepestHillClimbing(board)
@@ -90,8 +90,8 @@ def main():
                     result += str(board[col]) + " "
             result += "\nTime used: " + str(endTime - startTime) + "\nMemory used: " + str(traced[1] - traced[0]) + '\n'
             result += "\n"
-            
+
     print (result)
-        
+
 if __name__ == '__main__':
     main()
