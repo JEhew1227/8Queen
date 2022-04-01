@@ -4,6 +4,7 @@ import random, time, math
 from copy import deepcopy, copy
 import decimal
 import tracemalloc
+from puzzle import set
 
 class Board:
     def __init__(self, queen_count=8):
@@ -110,7 +111,7 @@ class SimulatedAnnealing:
         endTime = datetime.now()
         elapsedTime = (endTime - self.startTime).microseconds / 1000
         return elapsedTime
-        
+
 if __name__ == '__main__':
     tracemalloc.start()
     for i in range(1, 11):
