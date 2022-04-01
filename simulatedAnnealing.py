@@ -4,15 +4,136 @@ import random, time, math
 from copy import deepcopy, copy
 import decimal
 import tracemalloc
-from puzzle import set
+
+testStates = [
+    [
+        (0, 7),
+        (1, 5),
+        (2, 7),
+        (3, 1),
+        (4, 0),
+        (5, 0),
+        (6, 0),
+        (7, 6),
+    ],
+
+    [
+        (0, 4),
+        (1, 6),
+        (2, 5),
+        (3, 0),
+        (4, 1),
+        (5, 0),
+        (6, 6),
+        (7, 2),
+    ],
+
+    [
+        (0, 1),
+        (1, 3),
+        (2, 5),
+        (3, 2),
+        (4, 0),
+        (5, 3),
+        (6, 6),
+        (7, 5),
+    ],
+
+    [
+        (0, 4),
+        (1, 3),
+        (2, 4),
+        (3, 1),
+        (4, 2),
+        (5, 5),
+        (6, 1),
+        (7, 3),
+    ],
+
+    [
+        (0, 3),
+        (1, 2),
+        (2, 3),
+        (3, 1),
+        (4, 5),
+        (5, 7),
+        (6, 3),
+        (7, 2),
+    ],
+
+    [
+        (0, 1),
+        (1, 7),
+        (2, 4),
+        (3, 7),
+        (4, 7),
+        (5, 3),
+        (6, 3),
+        (7, 0),
+    ],
+
+    [
+        (0, 5),
+        (1, 3),
+        (2, 1),
+        (3, 6),
+        (4, 2),
+        (5, 1),
+        (6, 1),
+        (7, 2),
+    ],
+
+    [
+        (0, 6),
+        (1, 5),
+        (2, 0),
+        (3, 4),
+        (4, 1),
+        (5, 7),
+        (6, 3),
+        (7, 4),
+    ],
+
+    [
+        (0, 4),
+        (1, 1),
+        (2, 6),
+        (3, 2),
+        (4, 7),
+        (5, 4),
+        (6, 4),
+        (7, 2),
+    ],
+
+    [
+        (0, 1),
+        (1, 7),
+        (2, 1),
+        (3, 4),
+        (4, 6),
+        (5, 2),
+        (6, 2),
+        (7, 1),
+    ],
+]
 
 class Board:
-    def __init__(self, queen_count=8):
+    def __init__(self, positions=[], queen_count=8):
         self.queen_count = queen_count
-        self.reset()
+
+        if len(positions) == 0:
+            self.reset()
+        else:
+            self.setQueenPos(positions)
+
+    def setQueenPos(self, position):
+        self.queens = [-1 for _ in range(0, self.queen_count)]
+
+        for i in range(0, len(position)):
+            self.queens[i] = position[i][1]
 
     def reset(self):
-        self.queens = [-1 for i in range(0, self.queen_count)]
+        self.queens = [-1 for _ in range(0, self.queen_count)]
 
         for i in range(0, self.queen_count):
             self.queens[i] = random.randint(0, self.queen_count - 1)
@@ -105,20 +226,25 @@ class SimulatedAnnealing:
             self.elapsedTime = self.getElapsedTime()
             print("Unsuccessful, Elapsed Time: %sms" % (str(self.elapsedTime)))
 
-        return self.elapsedTime
+        return solutionFound
 
     def getElapsedTime(self):
         endTime = datetime.now()
         elapsedTime = (endTime - self.startTime).microseconds / 1000
         return elapsedTime
 
+successes = 0
 if __name__ == '__main__':
     tracemalloc.start()
-    for i in range(1, 11):
-        board = Board()
+    for i in range(0, 10):
+        board = Board(testStates[i])
         print("Board:")
         print(board)
-        SimulatedAnnealing(board).run()
+        solved = SimulatedAnnealing(board).run()
         traced = tracemalloc.get_traced_memory()
         print("total memory used: ",traced[1] - traced[0])
+        print()
+        if solved:
+            successes += 1
     tracemalloc.stop()
+    print(f"Number of successes: {successes}")

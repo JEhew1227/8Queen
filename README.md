@@ -91,3 +91,227 @@ Hew Kar Eun - Simulated Annealing
 (5, 2)
 (6, 2)
 (7, 1)
+
+
+# Section by Jim
+Board:
+(0, 7)
+(1, 5)
+(2, 7)
+(3, 1)
+(4, 0)
+(5, 0)
+(6, 0)
+(7, 6)
+
+Solution:
+(0, 0)
+(1, 6)
+(2, 4)
+(3, 7)
+(4, 1)
+(5, 3)
+(6, 5)
+(7, 2)
+
+Success, Elapsed Time: 629.687ms
+total memory used:  2449
+
+Board:
+(0, 4)
+(1, 6)
+(2, 5)
+(3, 0)
+(4, 1)
+(5, 0)
+(6, 6)
+(7, 2)
+
+Solution:
+(0, 2)
+(1, 6)
+(2, 1)
+(3, 7)
+(4, 4)
+(5, 0)
+(6, 3)
+(7, 5)
+
+Success, Elapsed Time: 784.144ms
+total memory used:  4326
+
+Board:
+(0, 1)
+(1, 3)
+(2, 5)
+(3, 2)
+(4, 0)
+(5, 3)
+(6, 6)
+(7, 5)
+
+Solution:
+(0, 1)
+(1, 6)
+(2, 2)
+(3, 5)
+(4, 7)
+(5, 4)
+(6, 0)
+(7, 3)
+
+Success, Elapsed Time: 325.74ms
+total memory used:  4326
+
+Board:
+(0, 4)
+(1, 3)
+(2, 4)
+(3, 1)
+(4, 2)
+(5, 5)
+(6, 1)
+(7, 3)
+
+Solution:
+(0, 3)
+(1, 1)
+(2, 7)
+(3, 5)
+(4, 0)
+(5, 2)
+(6, 4)
+(7, 6)
+
+Success, Elapsed Time: 407.642ms
+total memory used:  4328
+
+Board:
+(0, 3)
+(1, 2)
+(2, 3)
+(3, 1)
+(4, 5)
+(5, 7)
+(6, 3)
+(7, 2)
+
+Solution:
+(0, 2)
+(1, 5)
+(2, 7)
+(3, 0)
+(4, 3)
+(5, 6)
+(6, 4)
+(7, 1)
+
+Success, Elapsed Time: 542.054ms
+total memory used:  4328
+
+Board:
+(0, 1)
+(1, 7)
+(2, 4)
+(3, 7)
+(4, 7)
+(5, 3)
+(6, 3)
+(7, 0)
+
+Solution:
+(0, 4)
+(1, 6)
+(2, 0)
+(3, 2)
+(4, 7)
+(5, 5)
+(6, 3)
+(7, 1)
+
+Success, Elapsed Time: 560.504ms
+total memory used:  4328
+
+Board:
+(0, 5)
+(1, 3)
+(2, 1)
+(3, 6)
+(4, 2)
+(5, 1)
+(6, 1)
+(7, 2)
+
+Solution:
+(0, 4)
+(1, 0)
+(2, 7)
+(3, 5)
+(4, 2)
+(5, 6)
+(6, 1)
+(7, 3)
+
+Success, Elapsed Time: 660.623ms
+total memory used:  4328
+
+Board:
+(0, 6)
+(1, 5)
+(2, 0)
+(3, 4)
+(4, 1)
+(5, 7)
+(6, 3)
+(7, 4)
+
+Solution:
+(0, 2)
+(1, 4)
+(2, 7)
+(3, 3)
+(4, 0)
+(5, 6)
+(6, 1)
+(7, 5)
+
+Success, Elapsed Time: 408.493ms
+total memory used:  4328
+
+Board:
+(0, 4)
+(1, 1)
+(2, 6)
+(3, 2)
+(4, 7)
+(5, 4)
+(6, 4)
+(7, 2)
+
+Unsuccessful, Elapsed Time: 26.753ms
+total memory used:  4328
+
+Board:
+(0, 1)
+(1, 7)
+(2, 1)
+(3, 4)
+(4, 6)
+(5, 2)
+(6, 2)
+(7, 1)
+
+Solution:
+(0, 3)
+(1, 5)
+(2, 0)
+(3, 4)
+(4, 1)
+(5, 7)
+(6, 2)
+(7, 6)
+
+Success, Elapsed Time: 215.0ms
+total memory used:  4328
+
+Number of successes: 9
