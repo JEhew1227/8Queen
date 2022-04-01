@@ -92,8 +92,6 @@ Hew Kar Eun - Simulated Annealing
 (6, 2)
 (7, 1)
 
-
-# Section by Jim
 Board:
 (0, 7)
 (1, 5)
