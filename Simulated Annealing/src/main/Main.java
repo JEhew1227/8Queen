@@ -5,16 +5,16 @@ import java.text.NumberFormat;
 public class Main {
     public static int numberOfRuns = 10;
     public static Queen[][] initialStates = {
-        {new Queen(3, 0), new Queen(0, 1), new Queen(5, 2), new Queen(7, 3), new Queen(7, 4), new Queen(4, 5), new Queen(1, 6), new Queen(2, 7)},
-        {new Queen(2, 0), new Queen(7, 1), new Queen(6, 2), new Queen(0, 3), new Queen(0, 4), new Queen(4, 5), new Queen(5, 6), new Queen(7, 7)},
-        {new Queen(2, 0), new Queen(2, 1), new Queen(7, 2), new Queen(5, 3), new Queen(7, 4), new Queen(2, 5), new Queen(4, 6), new Queen(4, 7)},
-        {new Queen(2, 0), new Queen(5, 1), new Queen(4, 2), new Queen(7, 3), new Queen(1, 4), new Queen(0, 5), new Queen(6, 6), new Queen(7, 7)},
-        {new Queen(0, 0), new Queen(0, 1), new Queen(5, 2), new Queen(4, 3), new Queen(4, 4), new Queen(7, 5), new Queen(2, 6), new Queen(2, 7)},
-        {new Queen(6, 0), new Queen(4, 1), new Queen(4, 2), new Queen(1, 3), new Queen(7, 4), new Queen(4, 5), new Queen(4, 6), new Queen(7, 7)},
-        {new Queen(7, 0), new Queen(7, 1), new Queen(6, 2), new Queen(6, 3), new Queen(0, 4), new Queen(5, 5), new Queen(1, 6), new Queen(4, 7)},
-        {new Queen(7, 0), new Queen(1, 1), new Queen(4, 2), new Queen(7, 3), new Queen(5, 4), new Queen(1, 5), new Queen(4, 6), new Queen(2, 7)},
-        {new Queen(0, 0), new Queen(7, 1), new Queen(1, 2), new Queen(7, 3), new Queen(0, 4), new Queen(5, 5), new Queen(2, 6), new Queen(4, 7)},
-        {new Queen(7, 0), new Queen(5, 1), new Queen(0, 2), new Queen(4, 3), new Queen(6, 4), new Queen(3, 5), new Queen(5, 6), new Queen(7, 7)},
+        {new Queen(7, 0),new Queen(5, 1),new Queen(7, 2),new Queen(1, 3),new Queen(0, 4),new Queen(0, 5),new Queen(0, 6),new Queen(6, 7)},
+        {new Queen(4, 0),new Queen(6, 1),new Queen(5, 2),new Queen(0, 3),new Queen(1, 4),new Queen(0, 5),new Queen(6, 6),new Queen(2, 7)},
+        {new Queen(1, 0),new Queen(3, 1),new Queen(5, 2),new Queen(2, 3),new Queen(0, 4),new Queen(3, 5),new Queen(6, 6),new Queen(5, 7)},
+        {new Queen(4, 0),new Queen(3, 1),new Queen(4, 2),new Queen(1, 3),new Queen(2, 4),new Queen(5, 5),new Queen(1, 6),new Queen(3, 7)},
+        {new Queen(3, 0),new Queen(2, 1),new Queen(3, 2),new Queen(1, 3),new Queen(5, 4),new Queen(7, 5),new Queen(3, 6),new Queen(2, 7)},
+        {new Queen(1, 0),new Queen(7, 1),new Queen(4, 2),new Queen(7, 3),new Queen(7, 4),new Queen(3, 5),new Queen(3, 6),new Queen(0, 7)},
+        {new Queen(5, 0),new Queen(3, 1),new Queen(1, 2),new Queen(6, 3),new Queen(2, 4),new Queen(1, 5),new Queen(1, 6),new Queen(2, 7)},
+        {new Queen(6, 0),new Queen(5, 1),new Queen(0, 2),new Queen(4, 3),new Queen(1, 4),new Queen(7, 5),new Queen(3, 6),new Queen(4, 7)},
+        {new Queen(4, 0),new Queen(1, 1),new Queen(6, 2),new Queen(2, 3),new Queen(7, 4),new Queen(4, 5),new Queen(4, 6),new Queen(2, 7)},
+        {new Queen(1, 0),new Queen(7, 1),new Queen(1, 2),new Queen(4, 3),new Queen(6, 4),new Queen(2, 5),new Queen(2, 6),new Queen(1, 7)},
     };
 
     public static void main(String[] args) {
